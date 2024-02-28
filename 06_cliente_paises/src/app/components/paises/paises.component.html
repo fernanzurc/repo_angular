@@ -1,11 +1,12 @@
 <div class="container">
   <h1>Continentes</h1>
   <select (change)="cargaPaisesContinente()" [(ngModel)]="continenteSel">
+    <option>--</option>
     <option *ngFor="let c of continentes" value="{{c}}">{{c}}</option>
   </select>
   <br>
   <br>
-  <div *ngIf="paises">
+  <div *ngIf="paises&&paises.length>0">
     <h1>Paises</h1>
     <table border="1">
       <thead>
