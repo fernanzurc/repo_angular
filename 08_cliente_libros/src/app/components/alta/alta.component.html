@@ -1,0 +1,34 @@
+<div>
+  <h1>Nuevo libro</h1>
+  <div>
+    <div>
+      <div>
+        <div>
+          <label>Temática</label>
+          <select [(ngModel)]="libro.tematica">
+            <option *ngFor="let t of tematicas" value="{{ t }}">
+              {{ t }}
+            </option>
+          </select>
+        </div>
+
+        <div>
+          <label>Titulo</label>
+          <input type="text" [(ngModel)]="libro.titulo"/>
+        </div>
+        <div>
+          <label>Isbn</label>
+          <input type="text" [(ngModel)]="libro.isbn"/>
+        </div>
+        <br />
+      </div>
+    </div>
+    <br />
+    <div>
+      <button (click)="alta()">Grabar libro</button>
+    </div>
+
+  </div>
+</div>
+
+
